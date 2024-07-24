@@ -47,7 +47,7 @@ public class ItemActivity extends AppCompatActivity {
         itemVector.add(new Item(1, "Teenage", "Seventeen", "Album Seventeen Yang Lucu", R.drawable.teenage));
 
 
-        adapter = new ItemAdapter(itemVector);
+        adapter = new ItemAdapter(this, itemVector);
 
         recyclerView.setAdapter(adapter);
     }

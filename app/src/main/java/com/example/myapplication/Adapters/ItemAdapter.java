@@ -1,5 +1,7 @@
 package com.example.myapplication.Adapters;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.DetailActivity;
 import com.example.myapplication.Model.Item;
 import com.example.myapplication.R;
 
@@ -17,11 +20,13 @@ import java.util.Vector;
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>{
 
     Vector<Item> itemVector;
+    Context context;
 
     // Constructor vector
 
 
-    public ItemAdapter(Vector<Item> itemVector) {
+    public ItemAdapter(Context context, Vector<Item> itemVector) {
+        this.context = context;
         this.itemVector = itemVector;
     }
 
@@ -40,6 +45,15 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>{
         holder.name.setText(item.getName());
         holder.artist.setText(item.getArtist());
         holder.description.setText(item.getDescription());
+
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, DetailActivity.class);
+            intent.putExtra("ITEM_NAME", item.getName());
+            intent.putExtra("ITEM_ARTIST", item.getArtist());
+            intent.putExtra("ITEM_DESCRIPTION", item.getDescription());
+            intent.putExtra("ITEM_IMAGE", item.getImage());
+            context.startActivity(intent);
+        });
 
     }
 
