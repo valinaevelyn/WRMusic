@@ -52,6 +52,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>{
             intent.putExtra("ITEM_ARTIST", item.getArtist());
             intent.putExtra("ITEM_DESCRIPTION", item.getDescription());
             intent.putExtra("ITEM_IMAGE", item.getImage());
+            intent.putExtra("ITEM_GENRE", item.getGenre());
+            intent.putExtra("ITEM_PRICE", item.getPrice());
+            intent.putExtra("ITEM_RATING", item.getRating());
             context.startActivity(intent);
         });
 

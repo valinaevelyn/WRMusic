@@ -6,6 +6,10 @@ public class Item {
     private String artist;
     private String description;
     private int image;
+    private String genre;
+    private double price;
+    private double rating;
+
 
     // Constructor + Getter Setter -> ALT + INSERT
 
@@ -13,12 +17,15 @@ public class Item {
 
     }
 
-    public Item(int id, String name, String artist, String description, int image) {
+    public Item(int id, String name, String artist, String description, int image, String genre, double price, double rating) {
         this.id = id;
         this.name = name;
         this.artist = artist;
         this.description = description;
         this.image = image;
+        this.genre = genre;
+        this.price = price;
+        this.rating = rating;
     }
 
     public int getId() {
@@ -60,4 +67,29 @@ public class Item {
     public void setImage(int image) {
         this.image = image;
     }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+
 }

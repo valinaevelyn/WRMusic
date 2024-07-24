@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class DetailActivity extends AppCompatActivity {
 
     @Override
@@ -16,16 +19,27 @@ public class DetailActivity extends AppCompatActivity {
         String itemArtist = getIntent().getStringExtra("ITEM_ARTIST");
         String itemDescription = getIntent().getStringExtra("ITEM_DESCRIPTION");
         int itemImage = getIntent().getIntExtra("ITEM_IMAGE", -1);
+        String itemGenre = getIntent().getStringExtra("ITEM_GENRE");
+        double itemPrice = getIntent().getDoubleExtra("ITEM_PRICE", 0.0);
+        double itemRating = getIntent().getDoubleExtra("ITEM_RATING", 0.0);
 
         ImageView detailImage = findViewById(R.id.detailImage);
         TextView detailName = findViewById(R.id.detailName);
         TextView detailArtist = findViewById(R.id.detailArtist);
         TextView detailDescription = findViewById(R.id.detailDescription);
+        TextView detailGenre = findViewById(R.id.detailGenre);
+        TextView detailPrice = findViewById(R.id.detailPrice);
+        TextView detailRating = findViewById(R.id.detailRating);
+
+        NumberFormat format = NumberFormat.getCurrencyInstance(new Locale("id", "ID"));
+        String formattedPrice = format.format(itemPrice);
 
         detailImage.setImageResource(itemImage);
         detailName.setText(itemName);
         detailArtist.setText(itemArtist);
         detailDescription.setText(itemDescription);
-
+        detailGenre.setText(itemGenre);
+        detailPrice.setText(formattedPrice);
+        detailRating.setText(String.valueOf(itemRating));
     }
 }
