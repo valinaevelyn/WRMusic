@@ -15,6 +15,7 @@
         android:layout_gravity="end"
         android:layout_marginBottom="30dp"
         android:textStyle="bold"
+        android:fontFamily="@font/sfui"
         />
 
     <androidx.recyclerview.widget.RecyclerView

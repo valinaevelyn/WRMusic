@@ -24,6 +24,7 @@
         android:textSize="15dp"
         android:textColor="@color/white"
         android:textStyle="bold"
+        android:fontFamily="@font/sfui"
         />
 
     <TextView
@@ -32,7 +33,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:textSize="12dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:fontFamily="@font/sfui"/>
 
     <TextView
         android:id="@+id/itemDescription"
@@ -40,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:textSize="10dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:fontFamily="@font/sfui"/>
 
 </LinearLayout>
