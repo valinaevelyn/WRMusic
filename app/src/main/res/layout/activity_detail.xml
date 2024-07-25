@@ -7,10 +7,12 @@
     >
 
     <LinearLayout
+        android:id="@+id/detailLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="30dp"
+        android:background="@android:color/transparent"
         >
 
     <TextView
@@ -18,16 +20,18 @@
         android:layout_height="wrap_content"
         android:text="Album Details"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
         android:textStyle="bold"
-        android:fontFamily="@font/sfui"/>
+        android:fontFamily="@font/sfui"
+        />
 
     <ImageView
         android:id="@+id/detailImage"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:src="@drawable/anode"
         android:layout_gravity="center"
         />
@@ -38,7 +42,7 @@
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:padding="5dp"
+        android:paddingStart="5dp"
         android:text="K-Pop"
         android:textColor="@color/ungu_muda"
         android:fontFamily="@font/sfui"/>
@@ -47,7 +51,7 @@
         android:id="@+id/detailName"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="@color/ungu_main"
         android:text="An Ode"
         android:padding="5dp"
@@ -62,7 +66,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="Artist"
-        android:padding="5dp"
+        android:paddingStart="5dp"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:layout_gravity="center"
