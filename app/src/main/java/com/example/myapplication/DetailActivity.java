@@ -2,14 +2,20 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.text.NumberFormat;
 import java.util.Locale;
@@ -36,6 +42,9 @@ public class DetailActivity extends AppCompatActivity {
         TextView detailGenre = findViewById(R.id.detailGenre);
         TextView detailPrice = findViewById(R.id.detailPrice);
         TextView detailRating = findViewById(R.id.detailRating);
+        EditText quantity = findViewById(R.id.quantity);
+        Button addToCartBtn = findViewById(R.id.addToCartBtn);
+        TextView successMessage = findViewById(R.id.successMessage);
 
         NumberFormat format = NumberFormat.getCurrencyInstance(new Locale("id", "ID"));
         String formattedPrice = format.format(itemPrice);
@@ -52,5 +61,38 @@ public class DetailActivity extends AppCompatActivity {
         Drawable drawable = new BitmapDrawable(getResources(), bitmap);
         drawable.setAlpha(70);
         layout.setBackground(drawable);
+
+        addToCartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String quantityText = quantity.getText().toString();
+
+                if(quantityText.isEmpty()){
+                    showAlertDialog("Error", "Quantity must be filled.");
+                }else{
+                    int quantityValue = Integer.parseInt(quantityText);
+
+                    if(quantityValue < 1){
+                        showAlertDialog("Error", "Quantity minimum 1.");
+                    }else{
+                        successMessage.setVisibility(View.VISIBLE);
+                        successMessage.setLayoutParams(new LinearLayout.LayoutParams(
+                                LinearLayout.LayoutParams.WRAP_CONTENT,
+                                LinearLayout.LayoutParams.WRAP_CONTENT
+                        ));
+                    }
+
+                }
+            }
+        });
+
+    }
+
+    private void showAlertDialog(String title, String message){
+        AlertDialog alertDialog = new AlertDialog.Builder(this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("Try Again", null)
+                .show();
     }
 }
