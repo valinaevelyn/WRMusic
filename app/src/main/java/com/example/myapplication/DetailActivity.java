@@ -45,6 +45,7 @@ public class DetailActivity extends AppCompatActivity {
         EditText quantity = findViewById(R.id.quantity);
         Button addToCartBtn = findViewById(R.id.addToCartBtn);
         TextView successMessage = findViewById(R.id.successMessage);
+        ImageView backChevron = findViewById(R.id.backChevron);
 
         NumberFormat format = NumberFormat.getCurrencyInstance(new Locale("id", "ID"));
         String formattedPrice = format.format(itemPrice);
@@ -83,6 +84,13 @@ public class DetailActivity extends AppCompatActivity {
                     }
 
                 }
+            }
+        });
+
+        backChevron.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 
