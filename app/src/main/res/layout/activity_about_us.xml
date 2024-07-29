@@ -1,36 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
     tools:context=".AboutUsActivity">
 
-    <com.google.android.material.tabs.TabLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/aboutTabLayout">
-        
-        <com.google.android.material.tabs.TabItem
+        android:paddingTop="25dp"
+        android:paddingBottom="10dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="Menu"
+            android:src="@drawable/baseline_menu"
+            android:layout_marginStart="25dp"
+            android:background="#00000000"
+            />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="About">
-
-        </com.google.android.material.tabs.TabItem>
-        <com.google.android.material.tabs.TabItem
+            android:layout_gravity="center"
+            android:alpha="0.03"
+            android:textSize="55sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.4"
+            android:textAlignment="center"
+            android:text="@string/about_us_page_header"/>
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Contact">
+            android:gravity="end"
+            android:layout_gravity="center_vertical"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="35dp"
+            android:text="@string/about_us_page_header"/>
 
-        </com.google.android.material.tabs.TabItem>
-    </com.google.android.material.tabs.TabLayout>
-    <androidx.viewpager2.widget.ViewPager2
+    </FrameLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/aboutViewPager"
-        android:layout_below="@id/aboutTabLayout">
+        android:layout_height="match_parent">
 
-    </androidx.viewpager2.widget.ViewPager2>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/aboutTabLayout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:tabBackground="@drawable/tab_background"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/ungu_tua"
+            app:tabIndicatorGravity="stretch">
 
-</RelativeLayout>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_about" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_contact" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/aboutViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/aboutTabLayout" />
+    </RelativeLayout>
+</LinearLayout>
 

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="35dp"
     tools:context=".Fragments.AboutFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -10,7 +12,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="About Us"
+        android:text="@string/about_us_tab_header"
+        android:textStyle="bold"
         android:textSize="32sp" />
 
-</FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/about_us_tab_description"
+        android:textSize="16sp"
+        android:justificationMode="inter_word"/>
+
+</LinearLayout>

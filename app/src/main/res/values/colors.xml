@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="biru_dongker">#1A2346</color>
-    <color name="ungu_main">#6448B1</color>
+    <color name="ungu_tua">#1D1042</color>
     <color name="ungu_muda">#A283F9</color>
+    <color name="ungu_main">#6448B1</color>
 </resources>
