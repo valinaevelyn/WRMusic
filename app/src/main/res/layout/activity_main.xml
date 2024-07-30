@@ -12,21 +12,21 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-            <!--    Main Content-->
+        <!--    Main Content-->
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"></FrameLayout>
 
         <ImageButton
-                android:id="@+id/drawer_open_button"
-                android:contentDescription="Menu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="25dp"
-                android:padding="10dp"
-                android:src="@drawable/baseline_menu"
-                android:background="#00000000"/>
+            android:id="@+id/drawer_open_button"
+            android:contentDescription="Menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:padding="10dp"
+            android:src="@drawable/baseline_menu"
+            android:background="#00000000"/>
 
     </FrameLayout>
 
@@ -36,13 +36,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/black"
         android:paddingHorizontal="20dp"
         android:paddingVertical="45dp"
+        android:background="@color/dark_mode_background"
         app:headerLayout="@layout/drawer_header_layout"
-        app:itemBackground="@drawable/gradient_2"
+        app:itemBackground="@drawable/drawer_btn_background"
         app:itemIconPadding="15dp"
         app:itemIconSize="20dp"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
         app:menu="@menu/menu_drawer">
 
         <LinearLayout

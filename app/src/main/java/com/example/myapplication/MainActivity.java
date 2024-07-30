@@ -58,20 +58,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch(item.getItemId()){
-            case R.id.nav_home:
-//                home page
-                break;
-            case R.id.nav_about:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
-                break;
-            case R.id.nav_items_list:
-//                item lists page
-                break;
-            case R.id.nav_logout:
-//                back to login
-                break;
+        if(item.getItemId() == R.id.nav_home){
+            // home fragment
+        } else if(item.getItemId() == R.id.nav_about){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
+        } else if(item.getItemId() == R.id.nav_items_list){
+            // item list fragment
+        } else if(item.getItemId() == R.id.nav_logout){
+            // login page
         }
+
+        item.setChecked(true);
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

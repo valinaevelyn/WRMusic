@@ -45,10 +45,11 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            app:tabBackground="@drawable/tab_background"
+            android:background="@drawable/tab_background"
             app:tabGravity="fill"
-            app:tabIndicatorColor="@color/ungu_tua"
-            app:tabIndicatorGravity="stretch">
+            app:tabIndicatorGravity="stretch"
+            app:tabIndicatorColor="@color/ungu_muda"
+            app:tabIndicator="@drawable/tab_indicator">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"
