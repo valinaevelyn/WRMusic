@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.myapplication.Fragments.AboutFragment;
-import com.example.myapplication.Fragments.ContactFragment;
+import com.example.myapplication.Fragments.AboutTabFragment;
+import com.example.myapplication.Fragments.ContactTabFragment;
 
 public class AboutPageAdapter extends FragmentStateAdapter {
 
@@ -19,11 +19,11 @@ public class AboutPageAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position){
             case 0:
-                return new AboutFragment();
+                return new AboutTabFragment();
             case 1:
-                return new ContactFragment();
+                return new ContactTabFragment();
             default:
-                return new AboutFragment();
+                return new AboutTabFragment();
         }
     }
 

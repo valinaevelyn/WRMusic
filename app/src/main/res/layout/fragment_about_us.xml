@@ -5,24 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/gradient"
-    tools:context=".AboutUsActivity">
+    android:background="@drawable/gradient_1"
+    tools:context=".Fragments.AboutFragment">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="25dp"
         android:paddingBottom="10dp">
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:contentDescription="Menu"
-            android:src="@drawable/baseline_menu"
-            android:layout_marginStart="25dp"
-            android:background="#00000000"
-            />
 
         <TextView
             android:layout_width="match_parent"
