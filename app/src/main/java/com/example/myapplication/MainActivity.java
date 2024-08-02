@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.example.myapplication.Fragments.AboutFragment;
+import com.example.myapplication.Fragments.ItemFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if(item.getItemId() == R.id.nav_about){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
         } else if(item.getItemId() == R.id.nav_items_list){
-            // item list fragment
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ItemFragment()).commit();
         } else if(item.getItemId() == R.id.nav_logout){
             // login page
         }

@@ -1,28 +1,38 @@
-package com.example.myapplication;
+package com.example.myapplication.Fragments;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-
 import com.example.myapplication.Adapters.ItemAdapter;
 import com.example.myapplication.Model.Item;
+import com.example.myapplication.R;
 
 import java.util.Vector;
 
-public class ItemActivity extends AppCompatActivity {
+public class ItemFragment extends Fragment {
 
     RecyclerView recyclerView;
     ItemAdapter adapter;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_item);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_item, container, false);
+    }
 
-        recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
+        super.onViewCreated(view, savedInstanceState);
+
+        recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
 
         Vector<Item> itemVector = new Vector<>();
         itemVector.add(new Item(1, "An Ode", "Seventeen", "Album Seventeen Yang Keren", R.drawable.anode, "K-Pop", 500000, 4.5));
@@ -45,7 +55,7 @@ public class ItemActivity extends AppCompatActivity {
         itemVector.add(new Item(14, "Face The Sun", "Seventeen", "Album Seventeen Yang Bagus", R.drawable.fts, "Pop", 900000, 4.8));
         itemVector.add(new Item(15, "Teenage", "Seventeen", "Album Seventeen Yang Lucu", R.drawable.teenage, "Jazz", 650000, 4.7));
 
-        adapter = new ItemAdapter(this, itemVector);
+        adapter = new ItemAdapter(getContext(), itemVector);
 
         recyclerView.setAdapter(adapter);
     }
