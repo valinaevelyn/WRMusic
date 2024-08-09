@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="10dp"
+
     android:background="@drawable/contact_box_background">
 
     <ImageView
@@ -18,18 +19,21 @@
         android:text="Email Us"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:fontFamily="@font/font_sfui"
         android:textColor="@color/ungu_main"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Our team is on the line"
         android:textSize="10sp"
+        android:fontFamily="@font/font_sfui"
         android:textColor="@color/black"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mon-Fri • 9-17"
         android:textSize="10sp"
+        android:fontFamily="@font/font_sfui"
         android:textColor="@color/black"/>
 
 </LinearLayout>

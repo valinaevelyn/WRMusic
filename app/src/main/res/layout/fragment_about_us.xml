@@ -21,8 +21,9 @@
             android:alpha="0.03"
             android:textSize="55sp"
             android:textStyle="bold"
-            android:letterSpacing="0.4"
+            android:letterSpacing="0.3"
             android:textAlignment="center"
+            android:fontFamily="@font/font_sfui"
             android:text="@string/about_us_page_header"/>
         <TextView
             android:layout_width="match_parent"
@@ -32,6 +33,7 @@
             android:textSize="32sp"
             android:textStyle="bold"
             android:layout_marginHorizontal="35dp"
+            android:fontFamily="@font/font_sfui"
             android:text="@string/about_us_page_header"/>
 
     </FrameLayout>
@@ -54,11 +56,13 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/font_sfui"
                 android:text="@string/tab_about" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/font_sfui"
                 android:text="@string/tab_contact" />
 
         </com.google.android.material.tabs.TabLayout>
