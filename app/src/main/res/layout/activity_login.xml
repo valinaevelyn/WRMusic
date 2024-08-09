@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/gradient_1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log in"
+        android:textSize="40dp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="48dp"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/wr_music_logo"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WR MUSIC"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music for Everyone"
+        android:textSize="14sp"
+        android:textColor="#B3FFFFFF"
+        android:layout_gravity="center"
+        android:layout_marginBottom="48dp"/>
+
+    <FrameLayout
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"
+        >
+
+
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:textColorHint="#80FFFFFF"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_person_24"
+            android:layout_gravity="end|center_vertical"
+            android:padding="12dp"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center"
+        >
+
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColorHint="#80FFFFFF"
+            android:textColor="#FFFFFF"
+            android:inputType="textPassword"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"/>
+
+        <ImageView
+            android:id="@+id/togglePasswordVisibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_remove_red_eye_24"
+            android:layout_gravity="end|center_vertical"
+            android:padding="12dp"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:text="Error Message"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:layout_marginBottom="20dp"
+        android:textSize="13sp"
+        android:id="@+id/errorMessage"
+        android:visibility="invisible"
+
+        />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>
