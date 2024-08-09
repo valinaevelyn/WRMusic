@@ -22,7 +22,7 @@ public class ItemActivity extends AppCompatActivity {
         setContentView(R.layout.fragment_item);
 
         recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
         Vector<Item> itemVector = new Vector<>();
         itemVector.add(new Item(1, "An Ode", "Seventeen", "Album Seventeen Yang Keren", R.drawable.anode, "K-Pop", 500000, 4.5));

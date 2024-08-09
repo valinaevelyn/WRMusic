@@ -18,8 +18,8 @@
         android:fontFamily="@font/sfui"/>
 
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@drawable/wr_music_logo"
         android:layout_gravity="center"
         android:layout_marginBottom="16dp"
@@ -29,10 +29,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="WR MUSIC"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textColor="#FFFFFF"
         android:layout_gravity="center"
         android:layout_marginBottom="4dp"
+        android:textStyle="bold"
         android:fontFamily="@font/sfui"/>
 
     <TextView
@@ -40,7 +41,6 @@
         android:layout_height="wrap_content"
         android:text="Music for Everyone"
         android:textSize="14sp"
-        android:textColor="#B3FFFFFF"
         android:layout_gravity="center"
         android:layout_marginBottom="48dp"
         android:fontFamily="@font/sfui"/>
@@ -61,6 +61,7 @@
             android:textColorHint="#80FFFFFF"
             android:textColor="#FFFFFF"
             android:background="@drawable/rounded_edittext"
+
             android:padding="12dp"/>
 
         <ImageView

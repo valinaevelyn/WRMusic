@@ -15,7 +15,7 @@
     <string name="contact_us_tab_contact">Contact us in our social media</string>
 
     <string name="drawer_nav_header_greetings">Hello,</string>
-    <string name="drawer_username">PELIK</string>
+    <string name="drawer_username">username</string>
     <string name="drawer_nav_home">Home Page</string>
     <string name="drawer_nav_about_us">About Us</string>
     <string name="drawer_nav_items_list">Items List</string>
@@ -23,4 +23,14 @@
     <string name="drawer_nav_open">Open</string>
     <string name="drawer_nav_close">Close</string>
     <string name="drawer_footer">© 2024 All Rights Reserved. WR Music developed and crafted in 2024.</string>
+
+    <string name="email_box">Email Us</string>
+    <string name="call_box">Call Us</string>
+    <string name="instagram_box">Instagram</string>
+    <string name="telegram_box">Telegram</string>
+    <string name="facebook_box">Facebook</string>
+    <string name="whatsapp_box">Whatsapp</string>
+    <string name="info_box">4,6K Followers • 118 Posts</string>
+
+    <string name="item_list_page_header">Items</string>
 </resources>

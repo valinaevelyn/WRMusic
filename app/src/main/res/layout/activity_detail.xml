@@ -12,13 +12,12 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:orientation="vertical"
-        android:padding="30dp">
+        android:padding="35dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp">
+            android:layout_marginBottom="25dp">
 
             <ImageView
                 android:id="@+id/backChevron"
@@ -50,8 +49,8 @@
 
         <ImageView
             android:id="@+id/detailImage"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:layout_gravity="center"
             android:src="@drawable/anode" />
 
@@ -97,7 +96,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="15dp"
+        android:paddingHorizontal="35dp">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -151,9 +151,7 @@
         android:text="About"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:paddingHorizontal="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="start"
+        android:layout_gravity="center"
         android:fontFamily="@font/sfui"
         android:textStyle="bold"/>
 
@@ -164,9 +162,8 @@
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         android:textColor="@color/white"
         android:textSize="15dp"
-        android:paddingHorizontal="20dp"
         android:fontFamily="@font/sfui"
-        android:layout_gravity="start"
+        android:layout_gravity="center"
         />
 
     <LinearLayout

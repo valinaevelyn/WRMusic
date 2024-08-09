@@ -23,18 +23,19 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="20sp"
+            android:textColor="@color/white"
             android:fontFamily="@font/font_sfui"
-            android:text="Facebook"/>
+            android:text="@string/facebook_box"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/font_sfui"
-            android:text="4,6K Followers • 118 Posts"/>
+            android:text="@string/info_box"/>
     </LinearLayout>
 
 </LinearLayout>

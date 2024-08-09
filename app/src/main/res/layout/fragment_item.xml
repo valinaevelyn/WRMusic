@@ -3,49 +3,42 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:padding="30dp"
     android:background="@drawable/gradient_1">
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:paddingBottom="10dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Items"
-            android:textColor="@color/white"
-            android:textSize="105sp"
-            android:textAlignment="center"
-            android:letterSpacing="0.1"
-            android:alpha="0.04"
+            android:layout_gravity="center"
+            android:alpha="0.03"
+            android:textSize="55sp"
             android:textStyle="bold"
-            android:fontFamily="@font/sfui"
-            />
-
+            android:letterSpacing="0.3"
+            android:textAlignment="center"
+            android:fontFamily="@font/font_sfui"
+            android:text="@string/item_list_page_header"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Items"
-            android:textColor="@color/white"
-            android:textSize="35dp"
             android:gravity="end"
             android:layout_gravity="center_vertical"
-            android:layout_marginBottom="30dp"
+            android:textSize="32sp"
             android:textStyle="bold"
-            android:fontFamily="@font/sfui"
-            />
+            android:layout_marginHorizontal="35dp"
+            android:fontFamily="@font/font_sfui"
+            android:text="@string/item_list_page_header"/>
 
     </FrameLayout>
-
-
-
-
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingHorizontal="25dp"
     >
 
     </androidx.recyclerview.widget.RecyclerView>

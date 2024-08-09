@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:justificationMode="inter_word"
+        android:textColor="@color/white"
         android:fontFamily="@font/font_sfui"
         android:text="@string/contact_us_tab_description"/>
     <View
@@ -42,6 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="13sp"
+        android:textColor="@color/white"
         android:fontFamily="@font/font_sfui"
         android:text="@string/contact_us_tab_contact"/>
     <View
