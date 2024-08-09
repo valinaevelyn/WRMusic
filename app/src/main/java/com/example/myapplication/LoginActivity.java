@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,12 +45,19 @@ public class LoginActivity extends AppCompatActivity {
                 } else if (username.length() <= 5 || username.length() >= 10) {
                     showErrorMessage("Username length must be > 5 and < 10!");
                 } else {
-                    // Login berhasil
-                    errorMessageTextView.setVisibility(View.VISIBLE);
-                    errorMessageTextView.setText("Login berhasil");
+
+//                    SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+//                    SharedPreferences.Editor editor = sharedPreferences.edit();
+//                    editor.putString("drawer_username",username);
+//                    editor.apply();
+
+//                    TextView drawerUsername = findViewById(R.id.drawer_username);
+//                    drawerUsername.setText(username);
 
                     // Buat Intent untuk memulai MainActivity
-                    Intent intent = new Intent(LoginActivity.this, AboutActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.putExtra("USERNAME", username);
+
                     startActivity(intent);
 
                     // Akhiri LoginActivity sehingga pengguna tidak bisa kembali dengan tombol back

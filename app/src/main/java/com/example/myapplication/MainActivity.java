@@ -7,10 +7,12 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.myapplication.Fragments.AboutFragment;
 import com.example.myapplication.Fragments.ItemFragment;
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public NavigationView drawerView;
     public ImageButton drawerOpenButton;
     public ImageButton drawerCloseButton;
+    private TextView drawerUsername;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawer_layout);
         drawerView = findViewById(R.id.drawer_view);
         drawerOpenButton = findViewById(R.id.drawer_open_button);
+
+        View headerView = drawerView.getHeaderView(0);
+        drawerUsername = headerView.findViewById(R.id.drawer_username);
+
+        Intent intent = getIntent();
+        String username = intent.getStringExtra("USERNAME");
+
+        drawerUsername.setText(username);
 
         drawerView.setNavigationItemSelectedListener(this);
 
@@ -67,6 +78,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ItemFragment()).commit();
         } else if(item.getItemId() == R.id.nav_logout){
             // login page
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
         }
 
         item.setChecked(true);

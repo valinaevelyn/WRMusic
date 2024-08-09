@@ -14,14 +14,16 @@
         android:textColor="#FFFFFF"
         android:gravity="center"
         android:layout_marginTop="32dp"
-        android:layout_marginBottom="48dp"/>
+        android:layout_marginBottom="48dp"
+        android:fontFamily="@font/sfui"/>
 
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/wr_music_logo"
         android:layout_gravity="center"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,7 +32,8 @@
         android:textSize="20sp"
         android:textColor="#FFFFFF"
         android:layout_gravity="center"
-        android:layout_marginBottom="4dp"/>
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/sfui"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,7 +42,8 @@
         android:textSize="14sp"
         android:textColor="#B3FFFFFF"
         android:layout_gravity="center"
-        android:layout_marginBottom="48dp"/>
+        android:layout_marginBottom="48dp"
+        android:fontFamily="@font/sfui"/>
 
     <FrameLayout
         android:layout_width="265dp"
@@ -106,7 +110,7 @@
         android:textSize="13sp"
         android:id="@+id/errorMessage"
         android:visibility="invisible"
-
+        android:fontFamily="@font/sfui"
         />
 
     <Button
