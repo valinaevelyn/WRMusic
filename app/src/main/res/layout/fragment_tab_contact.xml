@@ -1,66 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="35dp"
     tools:context=".Fragments.ContactTabFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:justificationMode="inter_word"
-        android:textColor="@color/white"
-        android:fontFamily="@font/font_sfui"
-        android:text="@string/contact_us_tab_description"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="15dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:padding="35dp"
+        android:orientation="vertical">
 
-        <include layout="@layout/contact_call_box"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/wr_music_logo"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/sfui"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name_subheader"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/sfui"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:justificationMode="inter_word"
+            android:textColor="@color/white"
+            android:fontFamily="@font/font_sfui"
+            android:text="@string/contact_us_tab_description"/>
+
         <View
-            android:layout_width="20dp"
-            android:layout_height="match_parent"/>
-        <include layout="@layout/contact_email_box"/>
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <include layout="@layout/contact_call_box"/>
+            <View
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+            <include layout="@layout/contact_email_box"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/font_sfui"
+            android:text="@string/contact_us_tab_contact"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <include layout="@layout/contact_instagram_box"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <include layout="@layout/contact_telegram_box"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <include layout="@layout/contact_facebook_box"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <include layout="@layout/contact_whatsapp_box"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="15dp"/>
-    
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="13sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/font_sfui"
-        android:text="@string/contact_us_tab_contact"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"/>
-    <include layout="@layout/contact_instagram_box"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="15dp"/>
-    <include layout="@layout/contact_telegram_box"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="15dp"/>
-    <include layout="@layout/contact_facebook_box"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="15dp"/>
-    <include layout="@layout/contact_whatsapp_box"/>
-
-</LinearLayout>
+</ScrollView>

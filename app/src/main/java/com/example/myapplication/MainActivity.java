@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         View headerView = drawerView.getHeaderView(0);
         drawerUsername = headerView.findViewById(R.id.drawer_username);
+        drawerCloseButton = headerView.findViewById(R.id.drawer_close_button);
 
         Intent intent = getIntent();
         String username = intent.getStringExtra("USERNAME");
@@ -45,19 +46,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         drawerView.setNavigationItemSelectedListener(this);
 
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-//                this,
-//                drawerLayout,
-//                R.string.drawer_nav_open,
-//                R.string.drawer_nav_close
-//        );
-//        drawerLayout.addDrawerListener(toggle);
-//        toggle.syncState();
-
         drawerOpenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+        drawerCloseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Close the drawer
+                drawerLayout.closeDrawer(GravityCompat.START);
             }
         });
 
@@ -77,7 +77,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if(item.getItemId() == R.id.nav_items_list){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ItemFragment()).commit();
         } else if(item.getItemId() == R.id.nav_logout){
-            // login page
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
         }
