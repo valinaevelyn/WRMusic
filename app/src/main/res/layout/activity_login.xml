@@ -15,7 +15,10 @@
         android:gravity="center"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="48dp"
-        android:fontFamily="@font/sfui"/>
+        android:fontFamily="@font/sfui"
+        android:textStyle="bold"
+
+        />
 
     <ImageView
         android:layout_width="100dp"
@@ -30,7 +33,7 @@
         android:layout_height="wrap_content"
         android:text="WR MUSIC"
         android:textSize="24sp"
-        android:textColor="#FFFFFF"
+        android:textColor="#6448B1"
         android:layout_gravity="center"
         android:layout_marginBottom="4dp"
         android:textStyle="bold"
@@ -60,7 +63,7 @@
             android:hint="Username"
             android:textColorHint="#80FFFFFF"
             android:textColor="#FFFFFF"
-            android:background="@drawable/rounded_edittext"
+            android:background="@drawable/rounded_border"
 
             android:padding="12dp"/>
 
@@ -88,8 +91,10 @@
             android:textColorHint="#80FFFFFF"
             android:textColor="#FFFFFF"
             android:inputType="textPassword"
-            android:background="@drawable/rounded_edittext"
-            android:padding="12dp"/>
+            android:background="@drawable/rounded_border"
+            android:padding="12dp"
+
+            />
 
         <ImageView
             android:id="@+id/togglePasswordVisibility"
@@ -118,10 +123,9 @@
         android:id="@+id/loginButton"
         android:layout_width="265dp"
         android:layout_height="wrap_content"
-        android:text="Log In"
-        android:background="@drawable/rounded_button"
-        android:textColor="#FFFFFF"
         android:layout_gravity="center"
-        />
+        android:background="@drawable/rounded_button"
+        android:text="Log In"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>
