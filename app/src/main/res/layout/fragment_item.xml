@@ -31,6 +31,7 @@
             android:textStyle="bold"
             android:layout_marginHorizontal="35dp"
             android:fontFamily="@font/font_sfui"
+            android:textColor="@color/white"
             android:text="@string/item_list_page_header"/>
 
     </FrameLayout>

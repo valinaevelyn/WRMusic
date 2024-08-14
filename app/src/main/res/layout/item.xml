@@ -16,11 +16,11 @@
     
     <TextView
         android:id="@+id/itemName"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:layout_marginTop="2dp"
-        android:background="@color/purple_200"
+        android:background="@color/ungu_main"
         android:textSize="15dp"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:textSize="10dp"
+        android:textSize="8dp"
         android:textColor="@color/white"
         android:fontFamily="@font/sfui"/>
 
