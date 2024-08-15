@@ -15,6 +15,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.myapplication.Fragments.AboutFragment;
+import com.example.myapplication.Fragments.HomeFragment;
 import com.example.myapplication.Fragments.ItemFragment;
 import com.google.android.material.navigation.NavigationView;
 
@@ -62,16 +63,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 
         if (savedInstanceState == null){
-//            Ini yang nanti diubah jadi home
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
-            drawerView.setCheckedItem(R.id.nav_about);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+            drawerView.setCheckedItem(R.id.nav_home);
         }
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.nav_home){
-            // home fragment
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
         } else if(item.getItemId() == R.id.nav_about){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
         } else if(item.getItemId() == R.id.nav_items_list){
