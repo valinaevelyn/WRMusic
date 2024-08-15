@@ -57,11 +57,11 @@ public class HomeActivity extends AppCompatActivity {
 
 
         albumList = new ArrayList<>();
-        albumList.add(new Album("Expectation", "D.O.", "K-Pop", 4.5, R.drawable.album1, 250000));
-        albumList.add(new Album("Loveshot", "EXO", "K-Pop", 4.5, R.drawable.album2, 250000));
-        albumList.add(new Album("Obsession", "EXO", "K-Pop", 4.5, R.drawable.album3, 250000));
-        albumList.add(new Album("Room No.1", "Lee Mu Jin", "K-Pop", 4.5, R.drawable.album4, 250000));
-        albumList.add(new Album("The War", "EXO", "K-Pop", 4.5, R.drawable.album5, 250000));
+        albumList.add(new Album("Expectation", "D.O.", "K-Pop", 4.5, R.drawable.album1, 250000, "Lorem ipsum dolor sit amet, consectetur adipiscing."));
+        albumList.add(new Album("Loveshot", "EXO", "K-Pop", 4.5, R.drawable.album2, 250000, "Lorem ipsum dolor sit amet, consectetur adipiscing."));
+        albumList.add(new Album("Obsession", "EXO", "K-Pop", 4.5, R.drawable.album3, 250000, "Lorem ipsum dolor sit amet, consectetur adipiscing."));
+        albumList.add(new Album("Room No.1", "Lee Mu Jin", "K-Pop", 4.5, R.drawable.album4, 250000, "Lorem ipsum dolor sit amet, consectetur adipiscing."));
+        albumList.add(new Album("The War", "EXO", "K-Pop", 4.5, R.drawable.album5, 250000, "Lorem ipsum dolor sit amet, consectetur adipiscing."));
 
         topAlbumsAdapter = new TopAlbumsAdapter(this, albumList);
         topAlbumsRecyclerView.setAdapter(topAlbumsAdapter);

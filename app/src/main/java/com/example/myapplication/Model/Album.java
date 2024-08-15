@@ -7,14 +7,16 @@ public class Album {
     private double rating;
     private int image;
     private double price;
+    private String description;
 
-    public Album(String title, String artist, String genre, double rating, int image, double price) {
+    public Album(String title, String artist, String genre, double rating, int image, double price, String description) {
         this.title = title;
         this.artist = artist;
         this.genre = genre;
         this.rating = rating;
         this.image = image;
         this.price = price;
+        this.description = description;
     }
 
     public String getTitle() {
@@ -40,4 +42,6 @@ public class Album {
     public double getPrice() {
         return price;
     }
+
+    public String getDescription() { return  description; }
 }

@@ -41,6 +41,7 @@ public class TopAlbumsAdapter extends RecyclerView.Adapter<TopAlbumsAdapter.Albu
         holder.albumGenre.setText(album.getGenre());
         holder.albumTitle.setText(album.getTitle());
         holder.albumArtist.setText(album.getArtist());
+        holder.albumDescription.setText(album.getDescription());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +52,7 @@ public class TopAlbumsAdapter extends RecyclerView.Adapter<TopAlbumsAdapter.Albu
                 // Pass album details to DetailActivity
                 intent.putExtra("ITEM_NAME", album.getTitle());
                 intent.putExtra("ITEM_ARTIST", album.getArtist());
-                intent.putExtra("ITEM_DESCRIPTION", "Description of the album");
+                intent.putExtra("ITEM_DESCRIPTION", album.getDescription());
                 intent.putExtra("ITEM_IMAGE", album.getImage());
                 intent.putExtra("ITEM_GENRE", album.getGenre());
                 intent.putExtra("ITEM_PRICE", album.getPrice());
@@ -72,7 +73,7 @@ public class TopAlbumsAdapter extends RecyclerView.Adapter<TopAlbumsAdapter.Albu
     public static class AlbumViewHolder extends RecyclerView.ViewHolder {
 
         ImageView albumCover;
-        TextView albumGenre, albumTitle, albumArtist;
+        TextView albumGenre, albumTitle, albumArtist, albumDescription;
 
         public AlbumViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -80,6 +81,7 @@ public class TopAlbumsAdapter extends RecyclerView.Adapter<TopAlbumsAdapter.Albu
             albumGenre = itemView.findViewById(R.id.albumGenre);
             albumTitle = itemView.findViewById(R.id.albumTitle);
             albumArtist = itemView.findViewById(R.id.albumArtist);
+            albumDescription = itemView.findViewById(R.id.albumDescription);
         }
     }
 }

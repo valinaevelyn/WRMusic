@@ -65,9 +65,9 @@ public class HomeFragment extends Fragment {
 
 
         albumList = new ArrayList<>();
-        albumList.add(new Album("Expectation", "D.O.", "K-Pop", 4.5, R.drawable.album1, 150000));
-        albumList.add(new Album("Loveshot", "EXO", "K-Pop", 4.5, R.drawable.album2, 250000));
-        albumList.add(new Album("Obsession", "EXO", "K-Pop", 4.5, R.drawable.album3, 300000));
+        albumList.add(new Album("Expectation", "D.O.", "K-Pop", 4.5, R.drawable.album1, 150000, "Lorem ipsum dolor sit amet, consectetur adipiscing."));
+        albumList.add(new Album("Loveshot", "EXO", "K-Pop", 4.5, R.drawable.album2, 250000, "Lorem ipsum dolor sit amet, consectetur adipiscing."));
+        albumList.add(new Album("Obsession", "EXO", "K-Pop", 4.5, R.drawable.album3, 300000, "Lorem ipsum dolor sit amet, consectetur adipiscing."));
 
         topAlbumsAdapter = new TopAlbumsAdapter(getContext(), albumList);
         topAlbumsRecyclerView.setAdapter(topAlbumsAdapter);

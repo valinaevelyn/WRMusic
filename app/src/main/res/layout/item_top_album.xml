@@ -49,6 +49,15 @@
             android:textColor="@android:color/white"
             android:textSize="14sp"
             android:fontFamily="@font/sfui"/>
+
+        <TextView
+            android:id="@+id/albumDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:fontFamily="@font/sfui"/>
     </LinearLayout>
 
     <LinearLayout

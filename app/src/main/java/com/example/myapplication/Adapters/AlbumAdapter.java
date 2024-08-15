@@ -42,6 +42,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
         holder.albumGenre.setText(album.getGenre());
         holder.albumRating.setText(String.valueOf(album.getRating()));
         holder.albumCover.setImageResource(album.getImage());
+//        holder.albumDescription.setText(album.getDescription());
     }
 
     @Override
@@ -53,6 +54,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
 
         ImageView albumCover;
         TextView albumTitle, albumArtist, albumGenre, albumRating;
+        TextView albumDescription;
 
         public AlbumViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,6 +63,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
             albumArtist = itemView.findViewById(R.id.albumArtist);
             albumGenre = itemView.findViewById(R.id.albumGenre);
             albumRating = itemView.findViewById(R.id.albumRating);
+//            albumDescription = itemView.findViewById(R.id.albumDescription);
         }
     }
 }
